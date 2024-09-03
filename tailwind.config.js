@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         grocex1: '#2c793b',
         grocex2: '#073710'
-      }
+      },
     },
   },
   plugins: [],

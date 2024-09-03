@@ -22,4 +22,73 @@
     p {
         @apply lg:text-base md:text-base sm:text-sm text-sm font-normal tracking-wide;
     }
+    
+    section {
+        @apply px-5 md:px-6 lg:px-7 py-10 bg-slate-100 flex flex-col md:flex-row items-center gap-3;
+    }
+
+    #about img {
+        @apply md:max-w-[40%] lg:max-w-[30%];
+    }
+}
+
+@layer components {
+    header {
+        @apply bg-grocex1 fixed w-full h-[50px] p-2 flex items-center justify-between text-white top-0 z-[999];
+    }
+    header > img {
+        @apply h-[50px];
+    }
+
+    nav {
+        @apply flex gap-5 items-center;
+    }
+    nav a {
+        @apply tracking-wide font-[550] block p-2 hover:bg-white hover:text-grocex1 transition-all duration-300 rounded-xl;
+    }
+
+    .banner {
+        @apply h-[100vh] w-[100vw] relative flex;
+    }
+    .banner > img {
+        @apply w-full h-full object-cover;
+    }
+    .banner .detail {
+        @apply absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col gap-5 w-full h-full items-center justify-center bg-slate-600/40;
+    }
+    .detail a {
+        @apply bg-grocex1 px-2 py-1 rounded-xl w-fit mx-auto tracking-wide font-semibold text-xl;
+    }
+
+    .card-container-1 {
+        @apply grid grid-cols-1 gap-5;
+    }
+    .card-container-2 {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-5;
+    }
+    .card-container-3 {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-5;
+    }
+
+    .card {
+        @apply bg-slate-200 shadow-xl rounded-xl p-5 hover:scale-105 duration-500 overflow-hidden;
+    }
+
+    #testimonial a {
+        @apply bg-grocex1 px-3 py-1 text-white rounded-xl w-fit mx-auto;
+    }
+
+    #testimonial img {
+        @apply aspect-video w-full object-cover border-2;
+    }
+
+    footer a {
+        @apply w-fit hover:underline;
+    }
+}
+
+@layer utilities {
+    .tsh {
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
 }
