@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/manual.css">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +16,14 @@
 <body>
     <header>
         <img src="img/GROCEX WHITE FULL.png" alt="LOGO GROCEX">
-        <nav>
+        <span class="md:hidden cursor-pointer">
+            <ion-icon class="text-3xl" name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+        <nav class="flex gap-3 lg:gap-5 md:items-center absolute flex-col bg-grocex1 top-[50px] left-0 w-full p-3 z-auto md:static md:flex-row md:w-fit md:bg-transparent duration-500 md:opacity-100 opacity-0">
             <a href="#">HOME</a>
             <a href="#">ABOUT</a>
             <a href="#">SERVICES</a>
-            <a href="#">HOW IT WORKS</a>
+            <a href="#">METHOD</a>
             <a href="#">CONTACT</a>
         </nav>
     </header>
@@ -145,5 +149,6 @@
     </footer>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
